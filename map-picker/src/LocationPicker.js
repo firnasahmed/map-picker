@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import './LocationPicker.css';
+
+
 
 class LocationPicker extends Component {
   constructor(props) {
@@ -40,7 +43,7 @@ class LocationPicker extends Component {
 
    // Function to update the embedded Google Map with new coordinates
    updateEmbeddedMap = (latitude, longitude) => {
-    // Get a reference to the embedded map iframe
+    // Get a reference to the embedded map iframe 
     const iframe = document.getElementById('embeddedMap');
 
     // Generate the URL for the embedded map using the coordinates
@@ -52,37 +55,40 @@ class LocationPicker extends Component {
   render() {
     return (
         <div>
-        <div
-          ref={(div) => (this.mapContainer = div)}
-          style={{ width: '100%', height: '400px' }}
-        />
-        <div>
-          {/* Display place details if available */}
-          {this.state.selectedLocationDetails ? (
-            <div>
-              <h2>Place Details</h2>
-              <p>Name: {this.state.selectedLocationDetails.name}</p>
-              <p>Address: {this.state.selectedLocationDetails.formatted_address}</p>
-              {/* Add more details as needed */}
+          <main>
+            <div id="main-content">
+              <div id="main-map">
+                <div
+                  ref={(div) => (this.mapContainer = div)}
+                  style={{ width: '100%', height: '95%' }}
+                />
+              </div>
+              <div id="coordinates">
+                <div>
+                  <h2>Coordinates</h2>
+                  <p>Latitude: {this.state.selectedLocation?.lat}</p>
+                  <p>Longitude: {this.state.selectedLocation?.lng}</p>
+                </div>
+                <div id="space"></div>
+                <iframe
+                  id="embeddedMap"
+                  width="60%"
+                  height="400"
+                  frameborder="0"
+                  style={{ border: '0' }}
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
-          ) : (
-            // Display latitude and longitude if no place details available
-            <div>
-              <h2>Coordinates</h2>
-              <p>Latitude: {this.state.selectedLocation?.lat}</p>
-              <p>Longitude: {this.state.selectedLocation?.lng}</p>
+          </main>
+
+          <footer>
+            <div id="footer-content">
+              Developed by <a href="https://firnasahmed.github.io/me/" target="_blank" style={{ color: '#D51641'}}>Firnas Ahamed</a>
             </div>
-          )}
-        </div>
-        {/* Embedded Google Map */}
-        <iframe
-          id="embeddedMap"
-          width="600"
-          height="450"
-          frameborder="0"
-          style={{ border: 0 }}
-          allowfullscreen
-        ></iframe>
+          </footer>
+
+
       </div>
     );
   }
