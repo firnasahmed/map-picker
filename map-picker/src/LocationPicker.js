@@ -13,7 +13,7 @@ class LocationPicker extends Component {
 
   componentDidMount() {
     // Initialize the Google Maps map
-    // Google map api AIzaSyARvJewxRJX9BLfJo3CsZXFBOz8ZI7AKWM
+    const googleApiKey = "%REACT_APP_GOOGLE_API_KEY%";
     const google = window.google; // Accessing the Google Maps API from the window object
     const mapOptions = {
       center: { lat: 8.00, lng: 81.00 }, // We are setting an initial center point in Sri Lanka
@@ -37,7 +37,7 @@ class LocationPicker extends Component {
 
       // Update the iframe's src attribute with the new coordinates
     const iframe = document.getElementById('embeddedMap');
-    iframe.src = `https://www.google.com/maps/embed/v1/place?q=${selectedLocation.lat},${selectedLocation.lng}&key=AIzaSyARvJewxRJX9BLfJo3CsZXFBOz8ZI7AKWM`;
+    iframe.src = `https://www.google.com/maps/embed/v1/place?q=${selectedLocation.lat},${selectedLocation.lng}&key=${googleApiKey}`;
     });
   }
 
