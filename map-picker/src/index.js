@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const googleApiKey = process.env.REACT_APP_GOOGLE_API_KEY;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

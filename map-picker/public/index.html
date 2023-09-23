@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdwixn1cQKNrg44PoZaa8ptCA1jQtfuQw&libraries=places"></script>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -25,20 +26,6 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Map Picker</title>
-    <!-- Include your API key dynamically using JavaScript -->
-    <script>
-      // Load the API key from the environment variable
-      const googleApiKey = "%REACT_APP_GOOGLE_API_KEY%";
-
-      // Create a script tag to load the Google Maps API
-      const scriptTag = document.createElement('script');
-      scriptTag.src = `https://maps.googleapis.com/maps/api/js?key=${googleApiKey}&libraries=places`;
-      scriptTag.async = true;
-      scriptTag.defer = true;
-
-      // Append the script tag to the head of the document
-      document.head.appendChild(scriptTag);
-    </script>
   </head>
   <body style="overflow: hidden;">
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -54,5 +41,6 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <iframe id="embeddedMap" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
   </body>
 </html>

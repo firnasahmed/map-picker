@@ -13,10 +13,11 @@ class LocationPicker extends Component {
 
   componentDidMount() {
     // Initialize the Google Maps map
-    const googleApiKey = "%REACT_APP_GOOGLE_API_KEY%";
+    const googleApiKey = "AIzaSyBdwixn1cQKNrg44PoZaa8ptCA1jQtfuQw";
+
     const google = window.google; // Accessing the Google Maps API from the window object
     const mapOptions = {
-      center: { lat: 8.00, lng: 81.00 }, // We are setting an initial center point in Sri Lanka
+      center: { lat: 7.90, lng: 81.00 }, // We are setting an initial center point in Sri Lanka
       zoom: 8, // We are setting an initial zoom level as 8
     };
     const map = new google.maps.Map(this.mapContainer, mapOptions);
@@ -31,6 +32,12 @@ class LocationPicker extends Component {
       };
 
       console.log(selectedLocation);
+      if (!googleApiKey) {
+        console.log('Google API key is NOT found');
+      }
+      else{
+        console.log('Google API key is found');
+      }
 
       // Update the state with the selected location
       this.setState({ selectedLocation });
