@@ -102,7 +102,7 @@ You can customize the behavior of `@firnas/map-picker` by passing configuration 
 - `onLocationPick` (function): Callback function for location picking.
 - `initialLocation` (object): The initial location to display on the map.
 - `zoom` (number): The initial zoom level of the map.
-- `apiKey` (string): Your Google Maps API key (required for map functionality).
+- `apiKey` (string): Google Maps API key (required for map functionality).
 
 
 ### Acknowledgments

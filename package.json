@@ -2,7 +2,7 @@
   "name": "@firnasahmed/map-picker",
   "version": "0.1.1",
   "private": false,
-  "homepage": "https://firnasahmed.github.io/map-picker",
+  "homepage": "https://firnasahmed.github.io/map-picker/public/",
   "dependencies": {
     "@firnasahmed/map-picker": "^0.1.1",
     "@testing-library/jest-dom": "^5.17.0",
