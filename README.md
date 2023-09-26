@@ -45,7 +45,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 A versatile React component for picking a location on Google Maps and displaying the address as text.
 
-- You can see the demo here http://localhost:3000/
+- You can see the demo here https://youtu.be/gcF4ACea_fk
 
 ## Installation
 
@@ -94,7 +94,7 @@ You can customize the behavior of `@firnas/map-picker` by passing configuration 
   onLocationPick={handleLocationPick}
   initialLocation={{ lat: 123, lng: 456 }}
   zoom={15}
-  apiKey="your-google-maps-api-key"
+  apiKey="google-maps-api-key"
 />
 ```
 
@@ -106,7 +106,7 @@ You can customize the behavior of `@firnas/map-picker` by passing configuration 
 
 
 ### Acknowledgments
-Thanks to the contributors who helped make this library possible.
+Thanks for evryone.
 
 
 Developed by [Firnas Ahamed](https://firnasahmed.github.io/me)
